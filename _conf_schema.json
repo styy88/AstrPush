@@ -2,7 +2,7 @@
   "api": {
     "description": "AstrPush API服务配置",
     "type": "object",
-    "properties": {
+    "properties": {  // ✅ 对象类型必须用 properties 定义子属性
       "host": {
         "description": "API监听地址（默认0.0.0.0）",
         "type": "string",
@@ -10,7 +10,7 @@
       },
       "port": {
         "description": "API监听端口（默认9966）",
-        "type": "integer",
+        "type": "integer",  // ✅ 整数类型用 integer（JSON Schema标准）
         "default": 9966,
         "minimum": 1,
         "maximum": 65535
@@ -18,15 +18,17 @@
       "token": {
         "description": "请求鉴权Token（自动生成）",
         "type": "string",
+        "default": "",  // 留空，由代码自动生成
         "minLength": 16
       },
       "default_umo": {
-        "description": "默认消息接收者umo（必填）",
+        "description": "默认消息接收者umo（必填，从AstrBot日志获取）",
         "type": "string",
+        "default": "",  // 用户需在平台设置中填写
         "minLength": 3
       }
     },
-    "required": ["token", "default_umo"],
-    "additionalProperties": false
+    "required": ["token", "default_umo"],  // 必填字段
+    "additionalProperties": false  // 禁止额外属性
   }
 }
