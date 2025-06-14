@@ -2,31 +2,31 @@
   "api": {
     "description": "AstrPush API服务配置",
     "type": "object",
-    "properties": {
+    "properties": { 
       "host": {
         "description": "API监听地址（默认0.0.0.0，允许所有网卡访问）",
-        "type": "string",
+        "type": "string",  // 字符串类型
         "default": "0.0.0.0"
       },
       "port": {
         "description": "API监听端口（默认9966）",
-        "type": "integer",
+        "type": "integer",  // 整数类型（JSON Schema标准用 integer，非 int）
         "default": 9966,
         "minimum": 1,
         "maximum": 65535
       },
       "token": {
-        "description": "请求鉴权Token（必填，建议使用32位随机字符串，如`secrets.token_urlsafe(32)`生成）",
+        "description": "请求鉴权Token（必填，建议使用32位随机字符串）",
         "type": "string",
         "minLength": 16
       },
       "default_umo": {
-        "description": "默认消息接收者umo（必填，从AstrBot日志获取，格式如用户ID`123456`或群聊ID`7890@chatroom`）",
+        "description": "默认消息接收者umo（必填，从AstrBot日志获取）",
         "type": "string",
         "minLength": 3
       }
     },
-    "required": ["token", "default_umo"],
-    "additionalProperties": false
+    "required": ["token", "default_umo"],  // 必填属性列表
+    "additionalProperties": false  // 不允许额外未定义的属性
   }
 }
