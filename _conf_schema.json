@@ -2,7 +2,7 @@
   "api": {
     "description": "AstrPush API服务配置",
     "type": "object",
-    "properties": {  // ✅ 属性名用双引号
+    "items": {  // ✅ 属性名用双引号
       "host": {
         "description": "API监听地址",
         "type": "string",
