@@ -15,12 +15,7 @@ from astrbot.core.config.astrbot_config import AstrBotConfig
 from astrbot.core.message.message_event_result import MessageChain
 
 
-@register(
-    plugin_id="AstrPush",
-    author="Raven95676",
-    name="AstrPush",
-    version="0.2.0"
-)
+@register("AstrPush", "styy88", "Astrbot微信推送插件", "1.0.0")
 class AstrPush(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
