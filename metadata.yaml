@@ -1,6 +1,5 @@
-id: AstrPush
 name: AstrBot微信推送插件
-version: 1.0.0
+desc: 通过HTTP API接收消息并转发到微信（支持个人/群聊），支持默认接收者配置
+version: v1.0.0
 author: styy88
-description: 通过HTTP API接收消息并转发到微信（支持个人/群聊），支持默认接收者配置
-homepage: https://github.com/styy88/AstrPush
+repo: https://github.com/styy88/AstrPush
