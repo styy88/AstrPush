@@ -2,7 +2,7 @@
   "api": {
     "description": "AstrPush API服务配置",
     "type": "object",
-    "properties": {
+    "properties": {     
       "host": {
         "description": "API监听地址",
         "type": "string",
@@ -10,20 +10,20 @@
       },
       "port": {
         "description": "API监听端口",
-        "type": "integer",
+        "type": "integer",  
         "default": 9966
       },
       "token": {
-        "description": "鉴权Token",
+        "description": "鉴权Token（自动生成）",
         "type": "string",
         "default": ""
       },
       "default_umo": {
-        "description": "默认接收者umo",
+        "description": "默认接收者umo（必填）",
         "type": "string",
         "default": ""
       }
     },
-    "required": ["token", "default_umo"]
+    "required": ["token", "default_umo"]  
   }
 }
